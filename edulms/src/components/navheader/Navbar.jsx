@@ -5,6 +5,7 @@ import { FiChevronDown } from "react-icons/fi";
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [exploreVisible, setExploreVisible] = useState(false);
 
   const toggleMenu = () => {
     setIsVisible((prev) => !prev);
@@ -17,6 +18,10 @@ const Navbar = () => {
   const handleClose = () => {
     setIsVisible(false);
   };
+
+  const handleExploreToggle = () => {
+    setExploreVisible((prev) => !prev);
+  }
 
   return (
     <>
@@ -42,12 +47,14 @@ const Navbar = () => {
                   <Link
                     className="d-flex items-center"
                     data-el-toggle=".js-explore-toggle"
+                    data-el-toggle-active-class="-is-el-visible"
+                    onClick={handleExploreToggle}
                   >
                     <RiMenu4Fill />
                     Explore
                   </Link>
 
-                  <div className="explore-content py-25 rounded-8 bg-white toggle-element js-explore-toggle">
+                  <div className={`explore-content py-25 rounded-8 bg-white toggle-element js-explore-toggle ${exploreVisible ? "-is-el-visible":""}`}>
                     <div className="explore__item">
                       <Link
                         className="d-flex items-center justify-between text-dark-1"

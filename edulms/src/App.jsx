@@ -14,6 +14,12 @@ import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import DashBoard from "./components/Admin/DashBoard/DashBoard";
 import AdminSideNavaBar from "./components/Admin/AdminSideNavaBar/AdminSideNavaBar";
+import ManageCourses from "./components/Admin/ManageCourses/ManageCourse";
+import EnrollmentList from "./components/Admin/EnrollmentList/EnrollmentList";
+import ProgressTracking from "./components/Admin/ProgressTracking/ProgressTracking";
+import CommunicationTools from "./components/Admin/CommunicationTools/CommunicationTools";
+import ManageCertificates from "./components/Admin/ManageCertificates/ManageCertificates";
+import MasterLiveClass from "./components/Admin/MasterLiveClass/MasterLiveClass";
 
 function App() {
   return (
@@ -30,7 +36,16 @@ function App() {
           <Route path="/Register" element={<Register/>}/>
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>}/>
           <Route path="/TermConditions" element={<TermConditions/>}/>
-          <Route path="/AdminSideNavaBar/*" element={<AdminSideNavaBar/>}/>
+          <Route path="/AdminSideNavaBar" element={<AdminSideNavaBar/>}/>
+          <Route path="/ManageCourses" element={<ManageCourses/>}/>
+          <Route path="/EnrollmentList" element={<EnrollmentList/>}/>
+          <Route path="/ProgressTracking" element={<ProgressTracking/>}/>
+          <Route path="/CommunicationTools" element={<CommunicationTools/>}/>
+          <Route path="/ManageCertificates" element={<ManageCertificates/>}/>
+          <Route path="/MasterLiveClass" element={<MasterLiveClass/>}/>
+          {/* Admin Routes */}
+          <Route path="/DashBoard" element={<DashBoard/>}/>
+
           <Route path="/ContactUs" element={<ContactUs/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>

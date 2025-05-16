@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactApexChart from 'react-apexcharts';
+
+import AdminSideNavaBar from "../AdminSideNavaBar/AdminSideNavaBar";
 
 const DashBoard = () => {
   const chartData = {
@@ -81,6 +83,8 @@ const DashBoard = () => {
   return (
     
     <div className="dashboard__main">
+     {/* <AdminHeader/> */}
+      <AdminSideNavaBar/>
     <div className="dashboard__content bg-light-4">
       <div class="row pb-50 mb-10">
         <div class="col-auto">

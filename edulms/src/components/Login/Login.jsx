@@ -21,7 +21,7 @@ const Login = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
         // Handle login logic here
-        navigate('/AdminSideNavaBar');
+        navigate('/dashboard');
 
       };
   return (
